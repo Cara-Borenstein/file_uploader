@@ -8,3 +8,7 @@ class Upload(models.Model):
     url = models.URLField(null=True)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
+
+class UploadEnvelope(models.Model):
+    image = models.ForeignKey(Upload)
+    name = models.CharField(null=True, max_length=50)

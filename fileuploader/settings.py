@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles', # need this to serve uploaded static
     'imageuploads',
 ]
 
@@ -118,4 +118,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' # this will be the url that static files - static - are served from
+# I created the imageuploads/static/ directory that corresponds to this /static/ url for the
+# imageuploads app
+
+# to deploy static files in production...https://docs.djangoproject.com/en/1.10/howto/static-files/deployment/
